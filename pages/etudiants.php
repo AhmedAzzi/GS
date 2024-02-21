@@ -70,7 +70,7 @@ else
 
 <body>
 
-    <?php include("menu.php"); ?>
+    <?php if ($_SESSION['user']['role'] != 'etudiant') include("menu.php"); ?>
     <div class="container col-lg-offset-2">
         <h1 class="text-center margetop"><strong> Liste des étudiants </strong> </h1>
         <div class="panel panel-primary ">

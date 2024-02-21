@@ -5,20 +5,20 @@ require_once('connexiondb.php');
 $nom = isset($_POST['nom']) ? $_POST['nom'] : "";
 $prenom = isset($_POST['prenom']) ? $_POST['prenom'] : "";
 $matricule = isset($_POST['matricule']) ? $_POST['matricule'] : "";
-$civilite = isset($_POST['civilite']) ? $_POST['civilite'] : "";
-$annee_scolaire = isset($_POST['annee_scolaire']) ? $_POST['annee_scolaire'] : "";
+$civilite = isset($_POST['civilite']) ? $_POST['civilite'] : "H";
+$annee_scolaire = isset($_POST['annee_scolaire']) ? $_POST['annee_scolaire'] : "2023/2024";
 $idFiliere = isset($_POST['idFiliere']) ? $_POST['idFiliere'] : "";
 $resultat = isset($_POST['resultat']) ? $_POST['resultat'] : "";
-$photo = isset($_FILES['photo']['name']) ? $_FILES['photo']['name'] : "";
-$imageTemp = isset($_FILES['photo']['tmp_name']) ? $_FILES['photo']['tmp_name'] : "";
-move_uploaded_file($imageTemp, "../images/" . $photo);
+// $photo = isset($_FILES['photo']['name']) ? $_FILES['photo']['name'] : "";
+// $imageTemp = isset($_FILES['photo']['tmp_name']) ? $_FILES['photo']['tmp_name'] : "";
+// move_uploaded_file($imageTemp, "../images/" . $photo);
 // Data to be inserted into the etudiant table
 $data = array(
-    array($nom, $prenom, $matricule, $civilite, $annee_scolaire, $idFiliere, $resultat, $photo),
+    array($nom, $prenom, $matricule, $annee_scolaire, $idFiliere, $resultat),
 );
 
 // SQL query template
-$requete = "INSERT INTO etudiant (nom, prenom, matricule, civilite, annee_scolaire, idFiliere, resultat, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+$requete = "INSERT INTO etudiant (nom, prenom, matricule, annee_scolaire, idFiliere, resultat) VALUES (?, ?, ?, ?, ?, ?)";
 
 // Prepare the statement
 $resultat = $pdo->prepare($requete);

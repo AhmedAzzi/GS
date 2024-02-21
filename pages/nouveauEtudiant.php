@@ -27,24 +27,21 @@ $resultatF = $pdo->query($requeteF);
 
 </head>
 
-<body>
+<body style="margin: 100px;">
 
 	<div class="container">
 
-		<div class="panel panel-primary margetop ">
+		<div class="panel panel-primary">
 			<div class="panel-heading">Ajouter étudiant</div>
 			<div class="panel-body">
 				<form method="post" action="insertEtudiant.php" class="form">
-
 					<div class="row my-row">
 						<label for="nom" class="control-label col-sm-2"> Nom: </label>
 						<div class="col-sm-4">
 							<input type="text" name="nom" id="nom" class="form-control" />
 						</div>
 						<label for="prenom" class="control-label col-sm-2"> Prénom: </label>
-
 						<div class="col-sm-4">
-
 							<input type="text" name="prenom" id="prenom" class="form-control" />
 						</div>
 					</div>
@@ -53,14 +50,11 @@ $resultatF = $pdo->query($requeteF);
 						<label for="calendar1" class="control-label col-sm-2"> Date de naissance: </label>
 						<div class="col-sm-4">
 							<input type="date" name="date_naissance" id="date_naissance" class="form-control " />
-
 						</div>
-
 						<label for="lieu_naissance" class="control-label col-sm-2">Lieu de naissance: </label>
 						<div class="col-sm-4">
 							<input type="text" name="lieu_naissance" id="lieu_naissance" class="form-control" />
 						</div>
-
 					</div>
 					&nbsp
 					<div class="row my-row">
@@ -73,9 +67,7 @@ $resultatF = $pdo->query($requeteF);
 						<div class="col-sm-4">
 							<input type="text" name="ville" id="ville" class="form-control" />
 						</div>
-
 					</div>
-
 					&nbsp
 					<div class="row my-row">
 						<label for="cin" class="control-label col-sm-2"> Cin </label>
@@ -139,7 +131,6 @@ $resultatF = $pdo->query($requeteF);
 						</div>
 
 					</div>
-
 					&nbsp
 					<div class="row my-row">
 						<label for="date_inscription" class="control-label col-sm-2"> Date inscription: </label>
@@ -180,13 +171,7 @@ $resultatF = $pdo->query($requeteF);
 						<div class="row my-row">
 							<label for="anne_scolaire" class="control-label col-sm-2"> &nbsp &nbsp Annee Scolaire: </label>
 							<div class="col-sm-4">
-								<select name="anne_scolaire" class="form-control" id="anne_scolaire">
-									<option value="2018/2019">2018/2019</option>
-									<option value="2019/2020">2019/2020</option>
-									<option value="2020/2021">2020/2021</option>
-									<option value="2021/2022">2021/2022 </option>
-									<option value="2022/2023"> 2022/2023</option>
-								</select>
+								<input type="text" class="form-control" name="anne_scolaire" id="anne_scolaire">
 							</div>
 
 						</div>

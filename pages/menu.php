@@ -39,7 +39,6 @@ require_once('identifier.php');
       <ul class="nav navbar-nav">
         <li><a href="filieres.php"><i class="fas fa-tags"></i> Filières </a></li>
         <li><a href="etudiants.php"><i class="fa fa-id-card"></i> Etudiants</a></li>
-        <li><a href="enseignant.php"><i class="fa fa-chalkboard-teacher"></i> Enseignants</a></li>
         <li><a href="matieres.php"><i class="fa-brands fa-markdown"></i> Matiéres</a></li>
         <li><a href="programmes.php"><i class="fa fa-product-hunt"></i> Programmes</a></li>
         <li><a href="emplois.php"><span class="glyphicon glyphicon-calendar"></span> Emplois</a></li>
